@@ -1,0 +1,28 @@
+tooltip-content {
+    position: absolute;
+    background-color: lightgray;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+    visibility: hidden;
+  }
+  button:hover + div {
+    visibility: visible;
+  }
+  
+  .popup{
+    position: fixed;
+    bottom: 0;
+    right: 43%;
+    background-color: #89e46a; /* Light red background for errors */
+    color: #20721c; /* Dark red text color */
+    padding: 20px;
+    border-radius:10px 10px;
+    width: auto;
+    min-width: 200px;
+    min-height: 40px;
+    text-align: center;
+    /* transition: all 0.3s ease; /* Smooth transition for the popup */
+    /* z-index: 1000; Ensure it's above other content */ 
+  }

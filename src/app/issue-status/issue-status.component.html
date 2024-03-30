@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css">
+    <title>Issue Tracker</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);
+            height: 100vh;
+            color: azure;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Issue Tracker</h2>
+    <input class="form-control mb-3" id="searchInput" type="text" placeholder="Search by Issue ID...">
+    <button class="btn btn-primary mb-3" id="searchButton">Search</button>
+    <table class="table" style="color: azure;">
+        <thead>
+            <tr>
+                <th scope="col">Issue ID</th>
+                <th scope="col">Issue Type</th>
+                <th scope="col">Issue Description</th>
+                <th scope="col">Raised At</th>
+                <th scope="col">Issue Status</th>
+            </tr>
+        </thead>
+        <tbody id="issueTableBody">
+            <tr>
+                <td>1</td>
+                <td>UI Bug</td>
+                <td>The submit button is misaligned on the form.</td>
+                <td>2023-03-01</td>
+                <td>Open</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Backend Issue</td>
+                <td>API returns a 500 error at user registration.</td>
+                <td>2023-03-02</td>
+                <td>Investigating</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.min.js"></script
+
+document.getElementById('searchButton').addEventListener('click', function() {
+    var searchValue = document.getElementById('searchInput').value.toLowerCase();
+    var tableRows = document.querySelectorAll("#issueTableBody tr");
+
+    tableRows.forEach(function(row) {
+        var issueId = row.cells[0].textContent.toLowerCase();
+        if (issueId.includes(searchValue)) {
+            row.style.display = "";
+        } else {
+            row.style.display = "none";
+        }
+    });
+});
+    </script>

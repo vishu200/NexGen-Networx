@@ -1,0 +1,151 @@
+<!-- <section class="py-5 " style="  background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);
+">
+    <div class="container px-5 my-5">
+        <div class="text-center mb-5">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+            <h2 class="fw-bolder">Get in touch</h2>
+            <p class="lead mb-0">We'd love to hear from you</p>
+        </div>
+        <div class="row gx-9 justify-content-center container " style="width: 500px; margin: 0; padding: 0; margin-left: 60%; border-color: aliceblue; border-width: 10px;">
+            <div class="col-lg-13">
+                <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" >
+                    <div class="form-floating mb-3">
+                        <input class="form-control" formControlName="id" id="id" type="number" placeholder="Enter your id...">
+                        <label for="id">Id</label>
+                        <div *ngIf="contactForm.get('id')?.touched && contactForm.get('id')?.invalid" class="text-danger">
+                            Id is required.
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" formControlName="name" id="name" type="text" placeholder="Enter your name...">
+                        <label for="name">Full name</label>
+                        <div *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid" class="text-danger">
+                            A name is required.
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" formControlName="email" id="email" type="email" placeholder="name@example.com">
+                        <label for="email">Email address</label>
+                        <div *ngIf="contactForm.get('email')?.touched">
+                            <div *ngIf="contactForm.get('email')?.errors?.['required']" class="text-danger">
+                                An email is required.
+                            </div>
+                            <div *ngIf="contactForm.get('email')?.errors?.['email']" class="text-danger">
+                                Email is not valid.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input class="form-control" formControlName="phone" id="phone" type="number" placeholder="(123) 456-7890" minlength="10" maxlength="10">
+                        <label for="phone">Phone number</label>
+                        <div *ngIf="contactForm.get('phone')?.touched && contactForm.get('phone')?.invalid" class="text-danger">
+                            A valid phone number is required.
+                        </div>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea class="form-control" formControlName="message" id="message" placeholder="Enter your message here..." style="height: 10rem"></textarea>
+                        <label for="message">Message</label>
+                        <div *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid" class="text-danger">
+                            A message is required.
+                        </div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="submit" [disabled]="!contactForm.valid">Submit</button>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg" type="reset"  style="margin-top: 10px;">Clear</button>
+                    </div>
+                    
+                    <div *ngIf="showPopup" class="popup-message" [@popupAnimation]>
+                        Data sent successfully!
+                      </div>
+                    </form>
+                   
+                      
+                </div>
+            </div>
+        </div>
+    </section>
+     -->
+
+     <style>
+        .vertical-center {
+            min-height: 90vh; /* Fallback for browsers do not support Custom Properties */
+            min-height: -webkit-fill-available; /* Mobile viewport bug fix */
+            display: flex;
+            align-items: center;
+        }
+        body, html {
+    max-height: 100vh; /* Limit the maximum height to be that of the viewport */
+    overflow: hidden; /* Disable scrolling in the page */
+}
+    </style>
+<div class="  "  style="  margin-left: 0;  width: 100%; height: 100vh;  background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%); ;
+max-height: 100vh; ">
+        
+    <br><br><br>
+        <div class="text-center mb-5" style="animation-name: bounce;">
+            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3" style="margin: 20px;"><i class="bi bi-envelope"></i></div>
+            <h2 class="fw-bolder" style="color: rgb(255, 255, 255);" >Get in touch</h2>
+            <p class="lead mb-0" style="color: rgb(255, 255, 255);">We'd love to hear from you</p>
+        </div>
+    
+
+<!-- <body  class="bg-primary" style="display: flex; align-items: center; justify-content: center; padding: 0; " > -->
+    <div class="container my-5 bounce p" style=" background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%); padding: 7px; border-color: #0d6efd; border-width: 3px; border-style: solid;">
+        <div class="row">
+            <!-- Left side with symbols and quotes -->
+            <div class="col-md-6">
+                <div class="mb-4 text-center" style="color: aliceblue;" >
+                    <i class="bi bi-telephone-fill" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h3 >Stay Connected</h3>
+                </div>
+                <div class="text-center" style="color: aliceblue; margin-bottom: 40px;">
+                    <i class="bi bi-globe" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h3>Worldwide Services</h3>
+                </div>
+              
+                <blockquote class="blockquote text-center" style="color: rgb(109, 194, 228); ">
+                    <p class="mb-0">"The future of networking is here, connecting you to the world seamlessly."</p><br>
+                    <footer class="blockquote-footer" style="color: rgb(109, 194, 228);">NexGen Networx</footer>
+                </blockquote>
+            </div>
+            <!-- Right side with contact form centered -->
+            <div class="col-md-6 d-flex align-items-center">
+                <form class="w-100" style="color: aliceblue;" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                    <!-- <div class="mb-3">
+                      <label for="userId" class="form-label">User Id</label>
+                      <input type="number" class="form-control" id="userId" placeholder="Enter your id" formControlName="userId">
+                    </div>
+                    <div class="mb-3">
+                      <label for="userName" class="form-label">Username</label>
+                      <input type="text" class="form-control" id="userName" placeholder="Enter your username" formControlName="userName">
+                    </div> -->
+                    <div class="mb-3">
+                        <h3 class="fw-bolder" style="color: rgb(255, 255, 255);" style="text-align: center;">TELL US YOUR ISSUE!!</h3>
+                        <label for="issueType" class="form-label">Issue Type</label>
+                      <select class="form-select" id="issueType" formControlName="issueType">
+                        <option value="" disabled>Select issue type</option>
+                        <option value="networkIssue">Network Issue</option>
+                        <option value="dataIssue">Data Issue</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                    <div class="mb-3">
+                      <label for="issueName" class="form-label" >Message</label>
+                      <textarea class="form-control" id="issueName" rows="3" placeholder="Enter your message" formControlName="issueName"></textarea>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                      <button type="submit" class="btn btn-primary" style="margin-right: 28%; margin-top: 30px; width: 300px;">Send Message</button>
+                    </div>
+                    
+                    <div *ngIf="showPopup" [@popupAnimation] class="popup" [ngClass]="{'success-popup': popupMessage === 'Issue Submitted Successfully!', 'error-popup': popupMessage !== 'Issue Submitted Successfully!'}" style="width: fit-content; align-content: center;">
+                      {{ popupMessage }}
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+   

@@ -1,0 +1,68 @@
+<!-- <div class="login">
+        
+    <div class="login-text">LOGIN</div>
+    <form action="" (ngSubmit)="onLogin()">
+        <input type="email" name="email" [(ngModel)]="email" placeholder="Enter your email" required>
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password" required>
+        <div class="button">
+            <button class="submit" type="submit" >Login</button>
+            <button class="reset" type="reset">Clear</button>
+        </div>
+        <div *ngIf="showPopup" [@popupAnimation] class="popup" [ngClass]="{'success-popup': popupMessage === 'Login Successful!', 'error-popup': popupMessage !== 'Login Successful!'}">
+            {{ popupMessage }}
+          </div>
+        
+        <pre>new user <a href="#" routerLink="/sign-in" routerLinkActive="active">Sign Up</a></pre>
+                
+    </form>
+    
+</div>
+ -->
+
+
+
+<div class="body">
+    <section class="">
+        <!-- Jumbotron -->
+        <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);">
+          <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1 class="my-5 display-3 fw-bold ls-tight" style="color: rgb(63, 92, 105);">
+                  Welcome you to the <br />
+                  <span class="text-primary">NexGen Networx</span>
+                </h1>
+                <p style="color: hsl(215, 13%, 57%)">
+                    The forefront of innovative networking solutions tailored for the digital age. Our mission is to empower businesses with reliable, high-speed connectivity and unparalleled customer support. At NexGen Networx, we bridge the gap between technology and progress, ensuring your operations are seamless and secure in an ever-connected world.
+
+                </p>
+              </div>
+    <div class="login-b">
+        <div class="login">LOGIN</div>
+        <pre></pre>
+        <form action="" class="login-form" (ngSubmit)="onLogin()">
+            <input type="email" name="email" [(ngModel)]="email" placeholder="Enter your email" required>
+        <input type="password" name="password" [(ngModel)]="password" placeholder="Enter your password" required>
+        <div class="button">
+            <button class="btn btn-primary" type="submit" >Login</button>
+            <button class="btn " type="reset" style="background-color: aliceblue;">Clear</button>
+        </div>
+        <div *ngIf="showPopup" [@popupAnimation] class="popup" [ngClass]="{'success-popup': popupMessage === 'Login Successful!', 'error-popup': popupMessage !== 'Login Successful!'}">
+            {{ popupMessage }}
+          </div>
+        
+          <div class="container-newuser">
+            <pre class="newuser" style="font-family: calc();">new user <a href="#" routerLink="/sign-in" routerLinkActive="active">Sign Up</a></pre>
+          </div>
+              
+          <div class="popup-message">
+            <div *ngIf="showPopup" [@popupAnimation] class="popup" [ngClass]="{'success-popup': popupMessage === 'Login Successful!', 'error-popup': popupMessage !== 'Login Successful!'}">
+                {{ popupMessage }}
+              </div>
+            </div>
+              
+              
+              
+        </form>
+    </div>
+</div>

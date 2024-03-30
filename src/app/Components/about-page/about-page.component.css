@@ -1,0 +1,80 @@
+.about-us{
+    text-align:center;
+    float: left;
+
+}
+
+.card{
+
+    float: center;
+}
+.con{
+    background:linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);
+}
+.body{
+    color: black;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+    background:linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);
+}
+
+.con {
+    /* Linear gradient background from top to bottom */
+    background: linear-gradient(to bottom, #083e77, #6c757d);
+    height: fit-content; /* Example gradient from blue to gray */
+    color: #fff; /* White text color for better readability */
+    border-radius: 8px;
+  }
+
+  /* Existing styles */
+  .tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between tiles */
+    justify-content: center; /* Center tiles in the container */
+    padding: 20px; /* Padding around the container */
+  }
+  .tile {
+    width: 200px; /* Width of each tile */
+    height: 200px; /* Height of each tile */
+    background-color: #f0f0f0; /* Background color of the tile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Simple shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for mouseover effects */
+    color: #000; /* Reset text color for tiles */
+  }
+  /* Mouseover effects */
+  .tile:hover {
+    transform: translateY(-5px); /* Slightly raise the tile */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Enhanced shadow for a "lifted" effect */
+    background-color: #127fbf; /* Change background color */
+    cursor: pointer; /* Change the cursor to indicate it's clickable or has an action */
+  } 
+
+  /* Add this to your stylesheet */
+.gradient-background {
+    background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);
+    padding: 50px; /* Maintain the padding if necessary */
+    color: white; /* For white text contrast */
+  }
+
+  /* styles.css */
+body {
+    background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);
+    padding: 50px; /* If you want to keep the padding */
+    color: rgb(250, 250, 250);
+    display: flex;
+    /* Assuming you want white text for contrast */
+  }
+  
+  .card-img-top {
+    width: 100%; 
+    /* Makes the image width equal to its container's width */
+    height: auto; /* Scales the image height automatically to maintain aspect ratio */
+  }
+  

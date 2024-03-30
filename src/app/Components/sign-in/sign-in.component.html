@@ -1,0 +1,46 @@
+
+
+<div class="body">
+    <section class="">
+        <!-- Jumbotron -->
+        <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background: linear-gradient(135deg, #0A0A0A 0%, #2C3E50 100%);">
+          <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+              <div class="col-lg-6 mb-5 mb-lg-0">
+                <h1 class="my-5 display-3 fw-bold ls-tight" style="color: rgb(63, 92, 105);">
+                  Welcome you to the <br />
+                  <span class="text-primary">NexGen Networx</span>
+                </h1>
+                <p style="color: hsl(215, 13%, 57%)">
+                    The forefront of innovative networking solutions tailored for the digital age. Our mission is to empower businesses with reliable, high-speed connectivity and unparalleled customer support. At NexGen Networx, we bridge the gap between technology and progress, ensuring your operations are seamless and secure in an ever-connected world.
+
+                </p>
+              </div>
+    <div class="signup-b">
+        <div class="signin">SIGN UP</div>
+        <form action="" class="signup-form" (ngSubmit)="signup()">
+            <div>
+                <input type="text" placeholder="Enter your name"  [(ngModel)]="signupData.name" name="name">
+            </div>
+            <div>
+                <input type="tel" name="phone" [(ngModel)]="signupData.phoneNo" name="phoneNo" placeholder="Enter your mobile no." required minlength="10" maxlength="10">
+            </div>
+            <div>
+                <input type="email" name="email" placeholder="Enter your email-id" [(ngModel)]="signupData.email" name="email" required>
+            </div>
+            <div>
+                <input type="password" name="password" placeholder="Enter your password" [(ngModel)]="signupData.password" name="password" required>
+            </div>
+            <div class="button">
+                <button class="btn btn-primary" type="submit" >Sign Up</button>
+                <button class="btn " type="reset" style="background-color: aliceblue;">Clear</button>
+            </div>
+            <div *ngIf="showPopup" [@popupAnimation] class="popup" [ngClass]="{'success-popup': popupMessage === 'Signup successful!', 'error-popup': popupMessage !== 'Signup successful!'}" style="width: fit-content; align-content: center;">
+                {{ popupMessage }}
+              </div>
+              
+              
+              
+        </form>
+    </div>
+</div>

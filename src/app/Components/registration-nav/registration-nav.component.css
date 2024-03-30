@@ -1,0 +1,32 @@
+.regnav {
+     /* Background color for the navigation bar */
+    opacity: 100%;
+    display: flex;
+    justify-content: right;
+    padding: 15px;
+}
+
+.regnav button {
+    padding: 10px 20px; /* Padding for the buttons */
+    margin: 0 5px; /* Margin between the buttons */
+    border: 1px solid #007bff; /* Border for the buttons */
+    border-radius: 4px; /* Border radius for rounded corners */
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Text color */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition effect */
+}
+
+.regnav button:hover {
+    background-color: #0056b3; /* Background color on hover */
+}
+
+.regnav button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+.nav-link{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
